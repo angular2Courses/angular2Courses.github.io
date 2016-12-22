@@ -1,0 +1,40 @@
+<div class="element-bg-img"><img [src]="currentHotel.big_img" alt="" class="img-responsive"></div>
+<div class="element-left-bottom">
+	<div class="ele-strip">
+		<ul>
+			<li><p class="country_choose"
+			       (click)="changeCountry('Egypt'); chose(hotels[0]); toogleActiveCountry(1)"
+			       [ngClass]="{'active': activatedCountry === 1 }">Egypt</p></li>
+			<li><p class="country_choose"
+			       (click)="changeCountry('Turkish'); chose(hotels[5]); toogleActiveCountry(2)"
+			       [ngClass]="{'active': activatedCountry === 2 }">Turkish</p></li>
+			<li><p class="country_choose"
+			       (click)="changeCountry('Thailand'); chose(hotels[2]); toogleActiveCountry(3)"
+			       [ngClass]="{'active': activatedCountry === 3 }">Thailand</p></li>
+		</ul>
+	</div>
+	<div class="village">
+		<h3>Righteous indignation & like</h3>
+		<span class="line"> </span>
+		<div class="activity_box">
+			<div class="scrollbar" id="style-2">
+				<div class="activity-row"
+				     *ngFor="let hotel of hotels | CountryFilterPipe:country; let i = index"
+				     (click)="chose(hotel); selectHotel(i)"
+				     [ngClass]="{ 'active': selectedHotel == i }">
+					<div class="activity-desc">
+						<h5>{{ hotel.name }}</h5>
+						<h6>{{ hotel.describe }}</h6>
+					</div>
+					<div class="activity-img">
+						<ul>
+							<li><img [src]="hotel.big_img" alt=""/></li>
+							<li><img [src]="hotel.small_img" alt=""/></li>
+						</ul>
+					</div>
+					<div class="clear"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,13 @@
+<h1>Hot Weather Widget</h1>
+<div class="element">
+	<div class="element-left">
+		<app-hotels [hotels]="hotels"
+		            [currentHotel]="currentHotel"
+		            (choseCurrentHotel)="currentHotel=$event">
+		</app-hotels>
+	</div>
+	<div class="element-right">
+		<app-weather [currentHotelWeather]="currentHotel.weather"></app-weather>
+		<app-hotel-twitter [currentHotel]="currentHotel"></app-hotel-twitter>
+	</div>
+</div>
