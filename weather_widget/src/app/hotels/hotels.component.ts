@@ -1,4 +1,6 @@
-import {Component, OnInit, Output, Input, EventEmitter} from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
+
+import { HotelService } from '../services/hotel.service';
 
 @Component({
     selector: 'app-hotels',
@@ -9,9 +11,6 @@ export class HotelsComponent implements OnInit {
     @Input() public currentHotel: Hotel;
     @Input() public hotels: Hotel[];
 
-    @Output()
-    public choseCurrentHotel: EventEmitter<{Hotel}> = new EventEmitter();
-
     public selectedHotel: number = 0;
     public country: string;
     public activatedCountry: number;
@@ -19,8 +18,12 @@ export class HotelsComponent implements OnInit {
     ngOnInit() {
     }
 
-    public chose(hotel: {Hotel}): void {
-        this.choseCurrentHotel.emit(hotel);
+    public constructor(private _hotelService: HotelService){
+
+    }
+
+    public chose(hotel: Hotel): void {
+        this._hotelService.changeHotel(hotel);
     }
 
     public selectHotel(index: number):void {

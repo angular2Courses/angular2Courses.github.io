@@ -8,6 +8,7 @@ import { HotelsComponent } from './hotels/hotels.component';
 import { WeatherComponent } from './weather/weather.component';
 import { HotelTwitterComponent } from './hotel-twitter/hotel-twitter.component';
 import { CountryFilterPipe } from './filtres/country-filter.pipe';
+import { HotelService } from './services/hotel.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CountryFilterPipe } from './filtres/country-filter.pipe';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [HotelService],
   bootstrap: [AppComponent]
 })
 
