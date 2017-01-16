@@ -1,0 +1,14 @@
+<div *ngIf="showReserve" class="reserve">
+  <div class="reserve-overlay" (click)="changeShowReserve()"></div>
+  <div class="popup" [hidden]="completeReserve">
+    <div class="popup__name">{{service.name}}</div>
+    <div class="popup__choose-time">Choose Date: <ng2-datepicker [(ngModel)]="date"></ng2-datepicker></div>
+    <div class="popup__phone">Enter your number Phone: <input type="tel" [(ngModel)]="telNumber"></div>
+    <button class="popup__button"
+            (click)="goReserve(date.formatted, telNumber); date = ''; telNumber = '' "
+    >Reserve now</button>
+  </div>
+  <div class="complete" [hidden]="!completeReserve">
+    <div class="complete__text">Reserve complated</div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="detail-service" *ngIf="service">
+  <p class="detail-service__name">
+    <span>Name:</span> {{ service?.name }}
+  </p>
+  <p class="detail-service__name">
+    <span>Address:</span> {{ service?.address }}
+  </p>
+  <p class="detail-service__name">
+    <span>Rating:</span> 4.86
+  </p>
+  <p class="detail-service__name">
+    <span>Detail:</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porttitor turpis id felis vulputate, venenatis feugiat turpis pulvinar. Cras quis turpis at augue rutrum posuere in id magna. Proin lacinia convallis lacus eu eleifend. Maecenas efficitur bibendum orci in luctus. Vivamus porta ullamcorper quam, ac aliquet odio tempor fermentum. Maecenas vitae congue augue. Vivamus enim dui, dictum ut turpis ac, vehicula volutpat nulla. Vestibulum facilisis augue sagittis tellus tristique porttitor. Sed porta tempus euismod. Nullam a augue vitae arcu viverra sollicitudin vel ut purus. Sed pretium tincidunt massa, non fermentum risus vestibulum sit amet. Ut bibendum, elit sit amet egestas viverra, urna lectus consequat lorem, at malesuada erat magna rhoncus est. Morbi at nisl posuere, auctor massa vel, euismod nisi. In aliquet turpis venenatis porta ultrices.
+  </p>
+  <div class="reviews" *ngIf="service.reviews">
+    <p class="reviews__main-title">Reviews</p>
+    <div class="reviews__review" *ngFor="let review of toArray(service.reviews)">
+      <p class="reviews__name"><span class="greyColor">Name:</span> {{ review.name }}</p>
+      <p class="reviews__text"><span class="greyColor">Review:</span> {{ review.text }}</p>
+      <p class="reviews__rating"><span class="greyColor">Rating:</span> {{ review.rating }}</p>
+    </div>
+  </div>
+
+  <button class="detail-service__back-button"
+          (click)="goBack()">
+    Go Back</button>
+  <button class="detail-service__back-button" (click)="showReserve = true">Reserve</button>
+</div>
+<app-reserve [service]="service" [showReserve]="showReserve" (notShowReserve)="showReserve = $event"></app-reserve>
+

@@ -1,0 +1,49 @@
+:host{
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+.max-width{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.main_title{
+	text-align: center;
+	text-transform: uppercase;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.main_title h1{
+	font-weight: lighter;
+	font-size: 30px;
+}
+
+nav{
+	display: table;
+	width:100%;
+	border: 2px solid #000;
+}
+
+.nav-router{
+	display: table-cell;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #000;
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: lighter;
+	border-right: 1px solid #fff;
+	width: 50%;
+}
+
+.nav-router:last-child{
+	border-right: none;
+}
+
+.nav-router.active{
+	background: #fff;
+	color: #000;
+}

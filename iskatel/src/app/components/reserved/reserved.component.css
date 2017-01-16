@@ -1,0 +1,28 @@
+.reserve__title{
+	text-transform: uppercase;
+	text-align: center;
+	margin-top: 50px;
+}
+
+.reserve__block{
+	width: 50%;
+	background: #EDEDED;
+	margin: 30px auto;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	padding: 20px;
+	font-weight: lighter;
+	font-size: 14px;
+	display: block;
+	text-decoration: none;
+}
+
+.reserve__button{
+	border: 1px solid #000;
+	background: #fff;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.reserve__block div{
+	margin-top: 10px;
+}

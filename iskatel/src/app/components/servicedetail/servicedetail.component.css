@@ -1,0 +1,47 @@
+.detail-service{
+	width: 70%;
+	margin: 30px auto;
+	background: #EDEDED;
+	padding: 20px;
+}
+
+.detail-service__name{
+	color: #999;
+	padding: 3px 0 3px 0;
+}
+
+.detail-service__name span{
+	color: #222;
+}
+
+.detail-service__back-button{
+	border: 1px solid #000;
+	background: #fff;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.reviews{
+	font-size: 14px;
+}
+
+.reviews__main-title{
+	text-align: center;
+	margin: 30px 0 30px 0;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+
+.reviews__review{
+	padding: 10px;
+	border: 1px solid #000;
+	margin: 15px 0 15px 0;
+}
+
+.reviews__review p{
+	margin: 3px 0 3px 0;
+}
+
+.greyColor{
+	color: #999;
+}

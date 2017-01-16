@@ -1,0 +1,8 @@
+<div class="reserve">
+	<div class="reserve__title">Reserved</div>
+	<div class="reserve__block" *ngFor="let reserveService of reserveServices | async">
+		<div>{{reserveService.name}} | {{reserveService.type}} | {{reserveService.date}}</div>
+		<div>Status: {{reserveService.status}}</div>
+		<!--<button class="reserve__button">Write a review</button>-->
+	</div>
+</div>

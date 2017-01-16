@@ -1,0 +1,42 @@
+:host{
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+}
+
+.card-service{
+	width: 50%;
+	background: #EDEDED;
+	margin: 30px auto;
+	font-family: Tahoma,Verdana,Segoe,sans-serif;
+	padding: 20px;
+	font-weight: lighter;
+	font-size: 14px;
+	display: block;
+	text-decoration: none;
+}
+.card-service:hover{
+	box-shadow: 0px 0px 8px 0px black inset;
+}
+
+.card-service__type{
+	color: #999;
+	padding: 3px 0 3px 0;
+}
+
+.card-service__type span {
+	color: #222;
+}
+
+.card-service__reserve{
+	border: 1px solid #000;
+	background: #fff;
+	text-transform: uppercase;
+	margin-top: 10px;
+}
+
+.card-search{
+	width: 50%;
+	margin: 20px auto;
+	display: block;
+	font-size: 20px;
+	padding: 10px;
+}

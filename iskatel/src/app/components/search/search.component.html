@@ -1,0 +1,26 @@
+<input class="card-search" type="text" placeholder="Type" [(ngModel)]="type">
+<input class="card-search" type="text" placeholder="City" [(ngModel)]="city">
+
+<div class="card-service"
+   *ngFor="let service of services | async | type:type | city:city">
+	<div class="card-service__type"><span>Type:</span> {{ service.type }}</div>
+	<div class="card-service__type"><span>Address:</span> {{ service.address }}</div>
+	<div class="card-service__type"><span>Name:</span> {{ service.name }}</div>
+	<div class="card-service__type"><span>Rating:</span> 4.86</div>
+	<button class="card-service__reserve"
+	        (click)="changeCurrentService(service); showReserve = true">
+		Reserve</button>
+	<button class="card-service__reserve"
+	        [routerLink]="['/detail', service.name]">Details</button>
+</div>
+<app-reserve [service]="currentService"
+             [showReserve]="showReserve"
+             (notShowReserve)="showReserve = $event">
+</app-reserve>
+
+<!--<form [formGroup]="signupForm" (ngSubmit)="submitForm(signupForm.value)">-->
+<!--<input type="text" required autocomplete="off" formControlName="firstname"/>-->
+
+<!--<button type="submit" class="button button-block">Add</button>-->
+
+<!--</form>-->
